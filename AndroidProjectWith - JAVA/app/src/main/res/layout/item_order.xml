@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#14274f"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h15"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h90"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order History"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_all"
+        android:onClick="allOrdersClicked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="All Orders"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:textColor="#ffffff"
+        android:background="#14274f"
+        android:layout_margin="2dp"
+        app:layout_constraintBottom_toTopOf="@id/gl_h15"
+        app:layout_constraintEnd_toStartOf="@id/btn_shipped"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+    <Button
+        android:id="@+id/btn_shipped"
+        android:onClick="shippedClicked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Shipped"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="#14274f"
+        android:layout_margin="2dp"
+        app:layout_constraintBottom_toTopOf="@id/gl_h15"
+        app:layout_constraintEnd_toStartOf="@id/btn_delivered"
+        app:layout_constraintStart_toEndOf="@id/btn_all"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+    <Button
+        android:id="@+id/btn_delivered"
+        android:onClick="deliveredClicked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Delivered"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="#14274f"
+        android:layout_margin="2dp"
+        app:layout_constraintBottom_toTopOf="@id/gl_h15"
+        app:layout_constraintEnd_toStartOf="@id/btn_return"
+        app:layout_constraintStart_toEndOf="@id/btn_shipped"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+    <Button
+        android:id="@+id/btn_return"
+        android:onClick="returnsClicked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Returns"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="#14274f"
+        android:layout_margin="2dp"
+        app:layout_constraintBottom_toTopOf="@id/gl_h15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_delivered"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h15"
+        app:layout_constraintBottom_toTopOf="@id/gl_h90"
+        />
+
+    <!-- Bottom Navigation Buttons -->
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_home_24"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:background="#14274f"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/btn_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_shopping_cart_24"
+        android:text="Cart"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:background="#14274f"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/btn_profile"
+        app:layout_constraintStart_toEndOf="@id/btn_home"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_person_24"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:background="#14274f"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/btn_logo"
+        app:layout_constraintStart_toEndOf="@id/btn_cart"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_logo_dev_24"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:background="#14274f"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_profile"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

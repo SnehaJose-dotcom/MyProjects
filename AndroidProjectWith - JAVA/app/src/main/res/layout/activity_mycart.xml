@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyCart">
+
+    <!-- Main container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <!-- Cart Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start">
+
+            <ImageButton
+                android:id="@+id/backbtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/bckbtn"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="start"
+                android:contentDescription="Back Item"/>
+
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Cart"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#14274f"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User"
+            android:textSize="18sp"
+            android:textColor="#14274f"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="start"/>
+
+        <!-- ScrollView for Cart Items -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/cartLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Total Amount Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:background="#ffffff"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/totalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$209.89"
+                android:textSize="22sp"
+                android:padding="9px"
+                android:textColor="#FF5722"
+                android:layout_margin="30sp"
+                android:layout_gravity="end"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btnaddItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Items"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#404040"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#14274f"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
