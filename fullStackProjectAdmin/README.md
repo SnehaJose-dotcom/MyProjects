@@ -1,6 +1,6 @@
 My E-commerce Admin Dashboard
 
-This is the Admin Dashboard for the My E-commerce platform. It was developed by Xinfu Guo using Next.js 14, TypeScript, Tailwind CSS, and MongoDB.
+This is the Admin Dashboard for the My E-commerce platform. Developed using Next.js 14, TypeScript, Tailwind CSS, and MongoDB.
 
 Features:
 
