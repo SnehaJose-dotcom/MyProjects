@@ -4,7 +4,7 @@ This Angular 18 project is created for the ITE-5425 assignment. The app includes
 
 ## 🔗 Live Demo
 
-> Deployed on: [Netlify/Vercel or your link here]
+> Deployed on: https://angular-green-alpha.vercel.app/
 
 
 ## 🚀 Features
